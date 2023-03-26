@@ -32,7 +32,8 @@ def hangman ():
               print('')
           else:
               lives = lives - 1
-              print('Your letter,', user_letter, 'is not in the word.')
+              print(f'Yoot letter, {user_letter}, is not in the word.')
+              print(effect[lives])
 
       elif user_letter in used_letters:
           print('You already used that letter, please try another one.')
@@ -40,7 +41,6 @@ def hangman ():
           print('Invalid character. Try again please.')
 
     if lives == 0:
-        print(effect[lives])
         print(f'You died, the word was {word}')
     else:
         print(f'Yay, you guessed the word {word}!!') 
